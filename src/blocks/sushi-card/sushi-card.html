@@ -1,0 +1,46 @@
+<!--DEV
+
+@ @include('blocks/sushi-card/sushi-card.html')
+
+-->
+
+<div class="sushi-card">
+  <div class="sushi-card_wrapper">
+    <a
+      href="/"
+      class="sushi-card_preview"
+      style="background-image: url('./img/sushiPreview.png');"
+    ></a>
+    <div class="sushi-card_content">
+      <h3 class="sushi-card_title">
+        Lorem, ipsum dolor sit
+      </h3>
+      <p class="sushi-card_desc">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis,
+        doloribus!
+      </p>
+      <div class="sushi-card_count">
+        <span class="sushi-card_count-title">Колличество</span>
+        <div class="sushi-card_count-stepper">
+          <input
+            class="stepper"
+            type="number"
+            value="0"
+            min="0"
+            max="10000"
+            step="1"
+          />
+        </div>
+      </div>
+      <button class="button button--cart">
+        <svg width="15" height="15">
+          <use
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xlink:href="img/sprite-svg.svg#shopping-bag"
+          ></use>
+        </svg>
+        Закажу!
+      </button>
+    </div>
+  </div>
+</div>

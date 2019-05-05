@@ -1,0 +1,46 @@
+// В этом файле должны быть стили для БЭМ-блока social-link, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.social-link {
+  $block-name: &; // #{$block-name}__element {}
+
+  @include list-reset();
+  display: flex;
+
+  &_item {
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+  }
+
+  &_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $border-color;
+    border-radius: 50%;
+    outline: none;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: $color-main;
+
+      svg {
+        fill: $white;
+      }
+    }
+
+    &:active {
+      background-color: $color-main--active;
+    }
+
+    svg {
+      fill: #2d2b2d;
+      transition: fill 0.3s ease-in-out;
+    }
+  }
+}

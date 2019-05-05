@@ -1,0 +1,27 @@
+// В этом файле должны быть стили для БЭМ-блока mobile-menu, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.mobile-menu {
+  .phone_wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+  .phone_number {
+    font-size: 40px;
+    line-height: 1;
+
+    @media (max-width: 575px) {
+      font-size: 27px;
+    }
+  }
+
+  .phone_label {
+    margin-right: 15px;
+    svg {
+      &:not(:last-of-type) {
+        margin-right: -10px;
+      }
+    }
+  }
+}

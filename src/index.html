@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sushi Bistro</title>
+    <meta name="description" content />
+    @@include('_include/page_head.html')
+
+    <link
+      rel="preload"
+      href="fonts/roboto-v19-latin_cyrillic-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/roboto-v19-cyrillic-ext_latin-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+  </head>
+
+  <body>
+    <!-- Nav Start -->
+    @@include('blocks/nav/nav.html')
+    <!-- Nav End -->
+
+    <!-- Content Start -->
+    <section class="main">
+      <!-- Top Line With burger Start -->
+      @@include('blocks/mobile-menu/mobile-menu.html')
+      <!-- Top Line With burger End -->
+
+      <!-- Slider Start -->
+      <div class="container-fluid pr-0 pl-0">
+        @@include('blocks/top-slider/top-slider.html')
+      </div>
+      <!-- Slider End -->
+
+      <!-- sorting button Start -->
+      <div class="container-fluid">
+        @@include('blocks/mixi-button/mixi-button.html')
+      </div>
+      <!-- sorting button End -->
+
+      <!-- Sushi card Start -->
+      <div class="container-fluid main_sushi-card">
+        <div class="row">
+          <div
+            class="mix category1 category2 col-xxl-3 col-lg-4 col-sm-6 col-12"
+            data-order="1"
+          >
+            @@include('blocks/sushi-card/sushi-card.html')
+          </div>
+          <div
+            class="mix category1 col-xxl-3 col-lg-4 col-sm-6 col-12"
+            data-order="2"
+          >
+            @@include('blocks/sushi-card/sushi-card.html')
+          </div>
+          <div
+            class="mix category2 col-xxl-3 col-lg-4 col-sm-6 col-12"
+            data-order="2"
+          >
+            @@include('blocks/sushi-card/sushi-card.html')
+          </div>
+          <div
+            class="mix category1 col-xxl-3 col-lg-4 col-sm-6 col-12"
+            data-order="1"
+          >
+            @@include('blocks/sushi-card/sushi-card.html')
+          </div>
+          <div
+            class="mix category3 col-xxl-3 col-lg-4 col-sm-6 col-12"
+            data-order="3"
+          >
+            @@include('blocks/sushi-card/sushi-card.html')
+          </div>
+          <div
+            class="mix category2 col-xxl-3 col-lg-4 col-sm-6 col-12"
+            data-order="4"
+          >
+            @@include('blocks/sushi-card/sushi-card.html')
+          </div>
+          <div
+            class="mix category3 col-xxl-3 col-lg-4 col-sm-6 col-12"
+            data-order="1"
+          >
+            @@include('blocks/sushi-card/sushi-card.html')
+          </div>
+          <div
+            class="mix category3 col-xxl-3 col-lg-4 col-sm-6 col-12"
+            data-order="1"
+          >
+            @@include('blocks/sushi-card/sushi-card.html')
+          </div>
+        </div>
+      </div>
+      <!-- Sushi card Start -->
+
+      <!-- mini banner Start -->
+      <div class="container-fluid main_small-cards">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 col-12">
+            @@include('blocks/small-card/small-card.html')
+          </div>
+          <div class="col-md-4 col-sm-6 col-12">
+            @@include('blocks/small-card/small-card.html')
+          </div>
+          <div class="col-md-4 col-sm-12 col-12">
+            @@include('blocks/small-card/small-card.html')
+          </div>
+        </div>
+      </div>
+      <!-- mini banner End -->
+
+      <!-- Related Products Start -->
+      <div class="container-fluid pr-0 pl-0">
+        <div class="row no-gutters">
+          <div class="col-sm-6 col-12">
+            @@include('blocks/related-products-banner/related-products-banner.html',
+            {"ImgUrl": "./img/drinks-banner.png"})
+          </div>
+          <div class="col-sm-6 col-12">
+            @@include('blocks/related-products/related-products.html')
+          </div>
+        </div>
+        <div class="row no-gutters flex-row-reverse">
+          <div class="col-sm-6 col-12">
+            @@include('blocks/related-products-banner/related-products-banner.html',
+            {"ImgUrl": "./img/dressings-banner.png"})
+          </div>
+          <div class="col-sm-6 col-12">
+            @@include('blocks/related-products/related-products.html')
+          </div>
+        </div>
+      </div>
+      <!-- Related Products End -->
+
+      <!-- Footer start -->
+      @@include('blocks/footer/footer.html')
+      <!-- Footer end -->
+    </section>
+
+    <!-- Content End -->
+    <div class="nav-overlay"></div>
+    @@include('_include/page_bottom.html')
+    <script>
+      // Script for sort sushi card
+      var mixer = mixitup(".main_sushi-card", {
+        animation: {
+          duration: 500,
+          nudge: true,
+          reverseOut: false,
+          effects: "scale(0.01) translateZ(100px)"
+        }
+      });
+    </script>
+  </body>
+</html>

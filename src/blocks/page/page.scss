@@ -1,0 +1,103 @@
+@at-root {
+  @-ms-viewport {
+    width: device-width;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  padding: 0;
+  margin: 0;
+
+  word-break: break-word;
+  // background-color: $body-bg;
+}
+
+// a {
+//   text-decoration: none;
+//   color: $color-main;
+
+//   &:hover,
+//   &:focus {
+//     color: $color-main;
+//   }
+// }
+
+// ul {
+//   @include list-reset();
+// }
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+a,
+button,
+[role="button"],
+input,
+label,
+select,
+textarea {
+  touch-action: manipulation;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1140px !important;
+}
+
+// Helper classes
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

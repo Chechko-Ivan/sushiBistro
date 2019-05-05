@@ -1,0 +1,47 @@
+<!--DEV
+
+@ @include('blocks/footer/footer.html')
+
+-->
+
+<footer role="contentinfo" class="footer">
+  <div class="container-fluid pr-0 pl-0">
+    <div class="row">
+      <div class="col-12 d-flex flex-column align-items-center">
+        @@include('../logo/logo.html')
+        <h2 class="footer_title">
+          <span>Хотите, мы перезвоним вам в течении 30 секунд?</span>
+          Оставьте номер телефона в форме ниже!
+        </h2>
+        <form class="footer_form">
+          <label class="footer_label visually-hidden" for="callToAction"
+            >Введите номер телефона</label
+          >
+          <input
+            type="tel"
+            name="name"
+            class="footer_input"
+            id="callToAction"
+            placeholder="+375 (29) xxx xx xx"
+            required
+          />
+          <button class="button button_footer" type="submit">
+            Жду звонка!
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid d-flex justify-content-center align-items-center footer_copyright"
+    >
+      <div class="row">
+        <div class="col-12">
+          <span class="copyright"
+            >ООО “Суши-бистро”, УНП 12337833, Все права защищены.</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,49 @@
+// В этом файле должны быть стили для БЭМ-блока main, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-left: 300px;
+  overflow: hidden;
+
+  @media (max-width: 992px) {
+    margin-left: 0;
+  }
+
+  &-content {
+    position: relative;
+    min-height: vw(800px);
+    padding: vw(130px) 0 vw(70px) 0;
+    overflow: hidden;
+
+    &_label {
+      position: absolute;
+      top: 0;
+      right: 0;
+      letter-spacing: 0.5px;
+      transform: rotate(-90deg) translate(-25%, 96%);
+      font-size: vw(190px);
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #f7f6f2;
+      z-index: -1;
+    }
+  }
+
+  &_sushi-card {
+    margin-top: 8px;
+    margin-bottom: vh(65px);
+
+    @media (max-width: 1199px) {
+      margin-bottom: vh(30px);
+    }
+  }
+
+  &_small-cards {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}

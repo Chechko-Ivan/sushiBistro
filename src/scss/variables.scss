@@ -1,0 +1,52 @@
+$black: #000000;
+$gray-dark: #8a8a8a;
+$gray-darken: #a3a3a3;
+$gray: #cccccc;
+$white: #ffffff;
+
+$green: #4caf50;
+$orange: #e07b10;
+$red: #c00a27;
+
+$color-main: $red;
+$color-main--hover: lighten($red, 8%);
+$color-main--active: darken($red, 5%);
+
+$color-success: $green;
+$color-danger: $red;
+$color-warning: $orange;
+
+$text-color: $black;
+$text-color-mutted: $gray-dark;
+
+$border-color: $gray;
+$icon-color: $gray-darken;
+
+$font-size: 16px;
+
+$line-height: 1.65;
+
+$font-family: "San Francisco", -apple-system, BlinkMacSystemFont, "Roboto",
+  "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
+
+$grid-gutter-width: 15px;
+$grid-columns: 12;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1600px
+);
+$container-max-widths: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1600px
+);
+
+$gutter: $grid-gutter-width;

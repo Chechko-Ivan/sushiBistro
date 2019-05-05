@@ -1,0 +1,91 @@
+// В этом файле должны быть стили для БЭМ-блока menu, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.menu {
+  @include list-reset();
+
+  &_item {
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  &_link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-weight: 300;
+    font-size: 18px;
+    color: $black;
+    outline: none;
+    transition: color 0.1s ease;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      text-decoration: none;
+
+      &::after {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      &::after {
+        background-color: $color-main--active;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -28px;
+      z-index: -1;
+      width: calc(100% + 55px);
+      height: calc(100% + 2px);
+      background-color: $color-main;
+      transform: translateY(-50%);
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.1s ease;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -20px;
+      width: 15px;
+      height: 15px;
+      background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" viewBox="0 0 451.846 451.847"%3E%3Cpath d="M345.44 248.292l-194.287 194.28c-12.36 12.365-32.397 12.365-44.75 0-12.354-12.354-12.354-32.39 0-44.744l171.914-171.91L106.41 54.017c-12.354-12.36-12.354-32.394 0-44.748s32.39-12.36 44.75 0l194.287 194.284a31.53 31.53 0 0 1 9.262 22.366c0 8.1-3.09 16.196-9.267 22.373z"/%3E%3C/svg%3E');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transform: translateY(-50%);
+    }
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   right: -70px;
+    //   width: 50px;
+    //   height: 50px;
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+    //   background-position: center;
+    //   opacity: 0;
+    //   visibility: hidden;
+    //   transition: opacity 0.1s ease;
+    //   background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23c00a27" viewBox="0 0 163.861 163.861"%3E%3Cpath d="M34.857 3.613C20.084-4.86 8.107 2.08 8.107 19.106v125.637c0 17.042 11.977 23.975 26.75 15.51L144.67 97.275c14.778-8.477 14.778-22.21 0-30.686L34.857 3.613z"/%3E%3C/svg%3E');
+    // }
+  }
+
+  &_icon-sushi {
+    margin-right: 25px;
+  }
+}

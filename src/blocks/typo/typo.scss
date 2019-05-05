@@ -1,0 +1,130 @@
+$font-family: "San Francisco", -apple-system, BlinkMacSystemFont, "Roboto",
+  "Ubuntu", "Droid Sans", "Helvetica Neue", "Arial", sans-serif;
+
+@font-face {
+  font-weight: 300;
+  font-family: "Roboto";
+  font-style: normal;
+
+  font-display: swap;
+  src: local("Roboto Light"), local("Roboto-Light"),
+    url("../fonts/roboto-v19-cyrillic-ext_latin-300.woff2") format("woff2"),
+    url("../fonts/roboto-v19-cyrillic-ext_latin-300.woff") format("woff"),
+    url("../fonts/roboto-v19-cyrillic-ext_latin-300.ttf") format("truetype");
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: "Roboto";
+  font-style: italic;
+
+  font-display: swap;
+  src: local("Roboto Light Italic"), local("Roboto-LightItalic"),
+    url("../fonts/roboto-v19-latin_cyrillic-300italic.woff2") format("woff2"),
+    url("../fonts/roboto-v19-latin_cyrillic-300italic.woff") format("woff"),
+    url("../fonts/roboto-v19-latin_cyrillic-300italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "Roboto";
+  font-style: normal;
+
+  font-display: swap;
+  src: local("Roboto"), local("Roboto-Regular"),
+    url("../fonts/roboto-v19-latin_cyrillic-regular.woff2") format("woff2"),
+    url("../fonts/roboto-v19-latin_cyrillic-regular.woff") format("woff"),
+    url("../fonts/roboto-v19-latin_cyrillic-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Roboto";
+  font-style: normal;
+
+  font-display: swap;
+  src: local("Roboto Bold"), local("Roboto-Bold"),
+    url("../fonts/roboto-v19-latin_cyrillic-700.woff2") format("woff2"),
+    url("../fonts/roboto-v19-latin_cyrillic-700.woff") format("woff"),
+    url("../fonts/roboto-v19-latin_cyrillic-700.ttf") format("truetype");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Roboto";
+  font-style: italic;
+
+  font-display: swap;
+  src: local("Roboto Bold Italic"), local("Roboto-BoldItalic"),
+    url("../fonts/roboto-v19-latin_cyrillic-700italic.woff2") format("woff2"),
+    url("../fonts/roboto-v19-latin_cyrillic-700italic.woff") format("woff"),
+    url("../fonts/roboto-v19-latin_cyrillic-700italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-weight: 900;
+  font-family: "Roboto";
+  font-style: normal;
+
+  font-display: swap;
+  src: local("Roboto Black"), local("Roboto-Black"),
+    url("../fonts/roboto-v19-latin-900.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/roboto-v19-latin-900.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/roboto-v19-latin-900.ttf")
+      format("truetype"); /* Safari, Android, iOS */
+}
+
+$custom-font: "Roboto";
+
+body {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $custom-font, $font-family;
+  color: $text-color;
+}
+
+h1 {
+  // font-size: $font-size--h1;
+  // font-weight: 700;
+  // line-height: ;
+}
+
+h2 {
+  // font-size: ($font-size--h2);
+  // font-weight: 700;
+  // line-height: ;
+}
+
+h3 {
+  // font-size: $font-size--h3;
+  // font-weight: 700;
+  // line-height: ;
+}
+
+h4 {
+  // font-size: $font-size--h4;
+  // font-weight: 700;
+  // line-height: ;
+}
+
+h5 {
+  // font-size: $font-size--h5;
+  // font-weight: 700;
+  // line-height: ;
+}
+
+h6 {
+  // font-size: $font-size--h6;
+  // font-weight: 700;
+  // line-height: ;
+}
+
+// b,
+// strong {
+//   font-weight: ;
+// }
+
+button {
+  font-family: $custom-font, $font-family;
+}

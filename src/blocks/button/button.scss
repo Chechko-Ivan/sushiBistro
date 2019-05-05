@@ -1,0 +1,86 @@
+// В этом файле должны быть стили для БЭМ-блока button, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.button {
+  display: flex;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0;
+  padding: 13px 90px;
+  line-height: $line-height;
+  font-family: inherit;
+  text-transform: none;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: transparent;
+  background-image: none;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &--cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px 0;
+    font-weight: 700;
+    color: $white;
+    background-color: $color-main;
+    transition: all 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: $color-main--hover;
+    }
+
+    &:active {
+      background-color: $color-main--active;
+    }
+
+    svg {
+      margin-right: 10px;
+      fill: #ffffff;
+    }
+  }
+
+  &_footer {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    justify-content: center;
+    width: 100%;
+    max-width: 175px;
+    padding: 13px 0;
+    font-weight: 700;
+    color: $white;
+    background-color: $color-main;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+
+    @media (max-width: 575px) {
+      padding: 6px 0;
+      max-width: 110px;
+      font-size: 14px;
+      right: 20px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-main--hover;
+    }
+
+    &:active {
+      background-color: $color-main--active;
+    }
+  }
+}
