@@ -5,13 +5,35 @@
 .basket-table {
   $block-name: &; // #{$block-name}__element {}
 
+  .table {
+    @media (max-width: 575px) {
+      width: max-content;
+    }
+  }
+
+  &_product-item {
+    td:nth-child(4) {
+      @media (max-width: 575px) {
+        width: 250px !important;
+      }
+    }
+  }
+
   &_product-preview {
     display: inline-block;
     width: 100%;
     height: 125px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+
+    @media (max-width: 1199px) {
+      height: 80px;
+    }
+
+    @media (max-width: 767px) {
+      height: 50px;
+    }
   }
 
   &_product-name {
@@ -19,6 +41,23 @@
     font-size: 20px;
     font-weight: 800;
     color: #525252;
+    text-align: left;
+
+    @media (max-width: 1439px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 1199px) {
+      font-size: 12px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 9px;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 14px;
+    }
 
     &::after {
       content: "";
@@ -28,6 +67,14 @@
       width: 25px;
       height: 2px;
       background-color: #eeeeee;
+
+      @media (max-width: 767px) {
+        width: 15px;
+      }
+
+      @media (max-width: 575px) {
+        top: -7px;
+      }
     }
 
     span {
@@ -41,6 +88,19 @@
     text-transform: uppercase;
     font-weight: 500;
     color: #b8b8b8;
+
+    @media (max-width: 1439px) {
+      font-size: 10px;
+      margin-top: 5px;
+    }
+
+    @media (max-width: 1199px) {
+      font-size: 8px;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 10px;
+    }
   }
 
   &_product-coast {
@@ -50,11 +110,43 @@
     font-size: 20px;
     color: #4d4d4d;
 
+    @media (max-width: 1439px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 1199px) {
+      font-size: 12px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 9px;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 12px;
+    }
+
     &--old {
       margin-left: 5px;
       text-decoration: line-through;
       font-size: 14px;
       color: #dddddd;
+
+      @media (max-width: 1439px) {
+        font-size: 12px;
+      }
+
+      @media (max-width: 1199px) {
+        font-size: 10px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 7px;
+      }
+
+      @media (max-width: 575px) {
+        font-size: 9px;
+      }
     }
   }
 
@@ -68,6 +160,14 @@
     color: $orange;
     font-size: 20px;
     margin-right: vw(20px);
+
+    @media (max-width: 1439px) {
+      font-size: 18px;
+    }
+
+    @media (max-width: 1199px) {
+      font-size: 14px;
+    }
   }
 
   &_product-delate {
@@ -77,12 +177,73 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    align-items: center;
+    line-height: 30px;
     color: $orange;
     font-weight: 700;
     width: 30px;
     height: 30px;
     border: 0;
+    transition: all 0.2s ease;
+
+    @media (max-width: 1199px) {
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: #ffffff;
+      background-color: rgba($orange, 0.5);
+    }
   }
+
+  .sushi-card_count-stepper {
+    .stepper {
+      @media (max-width: 1199px) {
+        padding: 0;
+      }
+
+      @media (max-width: 767px) {
+        width: 35px;
+      }
+    }
+
+    .input-group {
+      @media (max-width: 575px) {
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.table-devider {
+  border-top: 1px solid rgba($border-color, 0.4);
+  border-bottom: 1px solid rgba($border-color, 0.4);
+
+  &_title {
+    margin-bottom: 0;
+    font-weight: 400;
+    color: #525252;
+    font-size: 14px;
+  }
+
+  &_total-sum {
+    font-size: 20px;
+    color: #525252;
+
+    .accent {
+      font-weight: 700;
+      color: $orange;
+    }
+  }
+
+  // .button {
+  //   margin-right: 40px;
+  // }
 }
 
 .table {

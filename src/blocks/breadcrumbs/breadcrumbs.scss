@@ -19,6 +19,10 @@
 
   &_content {
     margin-left: vw(90px);
+
+    @media (max-width: 991px) {
+      margin-left: 0;
+    }
   }
 
   &_title {

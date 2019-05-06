@@ -23,18 +23,27 @@
     "related-products-banner": [],
     "footer": [],
     "breadcrumbs": [],
-    "basket-table": []
+    "basket-table": [],
+    "form": [],
+    "check-preview": [],
+    "badge": [],
+    "product-info": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "./src/scss/functions.scss",
+    "./src/css/dop.scss",
     "./node_modules/bootstrap/scss/bootstrap-reboot.scss",
     "./node_modules/bootstrap/scss/bootstrap-grid.scss",
     "./node_modules/bootstrap/scss/utilities/_sizing.scss",
+    "./node_modules/bootstrap/scss/utilities/_position.scss",
     "./node_modules/bootstrap/scss/_breadcrumb.scss",
     "./node_modules/bootstrap/scss/_tables.scss",
-    "./node_modules/slick-carousel/slick/slick.scss"
+    "./node_modules/bootstrap/scss/_forms.scss",
+    "./node_modules/bootstrap/scss/_custom-forms.scss",
+    "./node_modules/slick-carousel/slick/slick.scss",
+    "./node_modules/aos/src/sass/aos.scss"
   ],
   "addCssAfter": [],
   "singleCompiled": [],
@@ -45,17 +54,12 @@
     "./node_modules/slick-carousel/slick/slick.min.js",
     "./node_modules/bootstrap-input-spinner/src/bootstrap-input-spinner.js",
     "./node_modules/mixitup/dist/mixitup.min.js",
-    "./node_modules/inputmask/dist/min/jquery.inputmask.bundle.min.js"
+    "./node_modules/inputmask/dist/min/jquery.inputmask.bundle.min.js",
+    "./node_modules/aos/dist/aos.js"
   ],
-  "addJsAfter": [
-    "./src/js/global-script.js"
-  ],
-  "addImages": [
-    "./src/img/*.{jpg,jpeg,gif,png,svg,ico}"
-  ],
-  "copiedJs": [
-    "src/js/moment-with-locales.js"
-  ],
+  "addJsAfter": ["./src/js/global-script.js"],
+  "addImages": ["./src/img/*.{jpg,jpeg,gif,png,svg,ico}"],
+  "copiedJs": ["src/js/moment-with-locales.js"],
   "copiedCss": [],
   "dirs": {
     "srcPath": "./src/",

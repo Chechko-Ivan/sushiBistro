@@ -30,6 +30,40 @@
       text-transform: uppercase;
       color: #f7f6f2;
       z-index: -1;
+
+      @media (max-width: 1919px) {
+        font-size: vw(130px);
+      }
+
+      @media (max-width: 1599px) {
+        font-size: 100px;
+        top: -35px;
+        right: 5px;
+        transform: none;
+      }
+
+      @media (max-width: 1439px) {
+        font-size: 80px;
+      }
+
+      @media (max-width: 1199px) {
+        font-size: 60px;
+        top: -20px;
+      }
+
+      @media (max-width: 991px) {
+        font-size: 50px;
+        top: -17px;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 40px;
+        top: -14px;
+      }
+
+      @media (max-width: 575px) {
+        display: none;
+      }
     }
   }
 

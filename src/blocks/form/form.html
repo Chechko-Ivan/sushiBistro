@@ -1,0 +1,55 @@
+<!--DEV
+
+@ @include('blocks/form/form.html')
+
+-->
+
+<div>
+  <div class="row">
+    <!-- Input name -->
+    <div class="form-group col-sm-6 col-12">
+      <label for="inpName">Имя</label>
+      <input type="text" class="form-control" id="inpName" />
+    </div>
+
+    <!-- Input last name -->
+    <div class="form-group col-sm-6 col-12">
+      <label for="inpLastName">Фамилия</label>
+      <input type="text" class="form-control" id="inpLastName" />
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Input address -->
+    <div class="form-group col-12">
+      <label for="address">Адрес доставки</label>
+      <input type="text" class="form-control" id="address" />
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Input phone number -->
+    <div class="form-group col-sm-6 col-12">
+      <label for="phoneNumber">Телефон</label>
+      <input type="tel" class="form-control" id="phoneNumber" />
+    </div>
+
+    <!-- Input email -->
+    <div class="form-group col-sm-6 col-12">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" required />
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Textarea -->
+    <div class="form-group col-12">
+      <label for="userComments">Комментарий к заказу</label>
+      <textarea
+        class="form-control form-control--textarea"
+        id="userComments"
+        rows="6"
+      ></textarea>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,132 @@
+// В этом файле должны быть стили для БЭМ-блока product-info, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.product-info {
+  $block-name: &; // #{$block-name}__element {}
+
+  &_title {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    line-height: 1.5;
+    font-size: 40px;
+    font-weight: 300;
+    color: #333333;
+
+    @media (max-width: 1439px) {
+      font-size: 35px;
+    }
+
+    @media (max-width: 1199px) {
+      font-size: 30px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 25px;
+    }
+
+    b {
+      font-weight: 700;
+      color: #000000;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 35px;
+      height: 2px;
+      background-color: rgba($border-color, 0.7);
+    }
+  }
+
+  &_coast {
+    font-size: 25px;
+    color: $orange;
+    font-weight: 700;
+
+    @media (max-width: 767px) {
+      font-size: 20px;
+    }
+
+    &--old {
+      font-size: 14px;
+      color: #dddddd;
+      text-decoration: line-through;
+
+      @media (max-width: 767px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &_desc {
+    font-size: 16px;
+    color: #525252;
+    font-weight: 300;
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
+  }
+
+  &_meta {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-title {
+      font-size: 16px;
+      font-weight: 400;
+
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+
+    &-item {
+      color: #525252;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+
+      &:not(:last-of-type) {
+        margin-right: 20px;
+      }
+    }
+
+    &-subtitle {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1;
+      margin-bottom: 7px;
+    }
+
+    &-value {
+      line-height: 1;
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+
+  .check-preview_block {
+    padding: 10px 0;
+  }
+
+  .sushi-card_count {
+    justify-content: flex-start;
+    margin-bottom: 0;
+
+    &-title {
+      margin-right: 10px;
+    }
+  }
+
+  .button--cart {
+    max-width: 270px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

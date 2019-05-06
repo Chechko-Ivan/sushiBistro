@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sushi Bistro Ваш Заказ. Оформление</title>
+    <meta name="description" content />
+    @@include('_include/page_head.html')
+
+    <link
+      rel="preload"
+      href="fonts/roboto-v19-latin_cyrillic-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/roboto-v19-cyrillic-ext_latin-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+  </head>
+
+  <body>
+    <!-- Nav Start -->
+    @@include('blocks/nav/nav.html')
+    <!-- Nav End -->
+
+    <!-- Content Start -->
+    <section class="main">
+      <!-- Top Line With burger Start -->
+      @@include('blocks/mobile-menu/mobile-menu.html')
+      <!-- Top Line With burger End -->
+
+      <!-- Breadcrubs Start -->
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+      <!-- Breadcrubs End -->
+
+      <div class="main-content">
+        <div class="main-content_label">Вкусно</div>
+
+        <!-- Content Inner Page start -->
+        <section
+          class="confirm-order mb-5"
+          data-aos="fade"
+          data-aos-delay="150"
+        >
+          <div class="confirm-order_container container position-relative">
+            <img
+              class="confirm-order_bike position-absolute"
+              src="./img/successImage.png"
+              alt="Мужик на скутере"
+            />
+            <div class="row">
+              <div class="col-12">
+                <h2 class="confirm-order_title mb-sm-5 mb-3">
+                  Ваш заказ <b class="accent">#32131</b> принят!
+                </h2>
+                <p class="confirm-order_message">
+                  <span class="mb-sm-4 mb-3"
+                    >Спасибо! Ваш заказ уже обрабатывается!</span
+                  >
+                  <strong
+                    >В ближайше время мы с вами свяжемся для проверки и
+                    подтверждения заказа. Пожалуйста, запомните номер заказа до
+                    момента доставки!</strong
+                  >
+                  <span class="mt-sm-4 mt-3">Приятного аппетита!</span>
+                </p>
+
+                <div class="check-preview_block mt-sm-5">
+                  <h4 class="check-preview_subtitle">Наименование</h4>
+                  <ul class="check-preview-list mt-4 mt-xl-3">
+                    <li class="check-preview-list_item mb-2">
+                      <span class="check-preview-list_item-name"
+                        >Ролл Филадельфия&nbsp;<b>x1</b></span
+                      >
+                      <span class="check-preview-list_item-coast"
+                        >13,90 руб.</span
+                      >
+                    </li>
+                    <li class="check-preview-list_item mb-2">
+                      <span class="check-preview-list_item-name"
+                        >Палочки для суши&nbsp;<b>х3</b></span
+                      >
+                      <span class="check-preview-list_item-coast"
+                        >13,90 руб.</span
+                      >
+                    </li>
+                    <li class="check-preview-list_item mb-2">
+                      <span class="check-preview-list_item-name"
+                        >Соевый соус&nbsp;<b>x2</b></span
+                      >
+                      <b class="check-preview-list_item-coast">13,90 руб.</b>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="check-preview_block">
+                  <h4
+                    class="check-preview_subtitle d-flex justify-content-between"
+                  >
+                    Сумма заказа
+                    <span class="check-preview_subtitle-coast">15.60 руб.</span>
+                  </h4>
+                </div>
+
+                <div class="confirm-order_selected-method mt-sm-4 mt-3">
+                  <h3>Вы выбрали способ оплаты:</h3>
+                  <span>Оплата наличными</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Content Inner Page end -->
+      </div>
+
+      <!-- Footer Start -->
+      @@include('blocks/footer/footer.html')
+      <!-- Footer End -->
+    </section>
+
+    <!-- Content End -->
+    <div class="nav-overlay"></div>
+    @@include('_include/page_bottom.html')
+  </body>
+</html>

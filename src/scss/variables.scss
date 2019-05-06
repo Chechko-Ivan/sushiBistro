@@ -9,8 +9,8 @@ $orange: #e07b10;
 $red: #c00a27;
 
 $color-main: $red;
-$color-main--hover: lighten($red, 8%);
-$color-main--active: darken($red, 5%);
+$color-main--hover: lighten($red, 7%);
+$color-main--active: darken($red, 2%);
 
 $color-success: $green;
 $color-danger: $red;
@@ -50,3 +50,7 @@ $container-max-widths: (
 );
 
 $gutter: $grid-gutter-width;
+
+.w-60 {
+  width: 60% !important;
+}

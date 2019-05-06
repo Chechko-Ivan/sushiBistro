@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sushi Bistro Ваш Заказ. Оформление</title>
+    <meta name="description" content />
+    @@include('_include/page_head.html')
+
+    <link
+      rel="preload"
+      href="fonts/roboto-v19-latin_cyrillic-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/roboto-v19-cyrillic-ext_latin-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+  </head>
+
+  <body>
+    <!-- Nav Start -->
+    @@include('blocks/nav/nav.html')
+    <!-- Nav End -->
+
+    <!-- Content Start -->
+    <section class="main">
+      <!-- Top Line With burger Start -->
+      @@include('blocks/mobile-menu/mobile-menu.html')
+      <!-- Top Line With burger End -->
+
+      <!-- Breadcrubs Start -->
+      @@include('blocks/breadcrumbs/breadcrumbs.html')
+      <!-- Breadcrubs End -->
+
+      <div class="main-content">
+        <div class="main-content_label">Вкусно</div>
+
+        <!-- Content Inner Page start -->
+        <div class="product-page">
+          <div class="product-page_top container">
+            <div class="row">
+              <div
+              data-aos="fade"
+        data-aos-delay="150"
+                class="col-12 col-sm-6 col-xl-7 d-flex justify-content-center align-items-center mb-5 mb-sm-0"
+              >
+                <img
+                  class="product-page_preview"
+                  src="/img/innerProductImage.png"
+                  alt="ролл филадельфия"
+                />
+              </div>
+              <div class="col-12 col-sm-6 col-xl-5" data-aos="fade"
+              data-aos-delay="300">
+                @@include('blocks/product-info/product-info.html')
+              </div>
+            </div>
+          </div>
+
+          <div class="addition">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="addition_top col-12 d-flex justify-content-center">
+                  <h3 class="addition_title" data-aos="fade"
+                  data-aos-delay="150">
+                    Возможно, вам так же будет интересно
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="addition_slider container-fluid position-relative">
+              <div class="row addition_slider-wrapper">
+                <div class="col-xxl-3 col-xl-4">
+                  <div class="sushi-card sushi-card--small">
+                    <div class="sushi-card_wrapper">
+                      <a
+                        href="/product_page.html"
+                        class="sushi-card_preview"
+                      >
+                      <img
+                        src="./img/ginger.png"
+                        alt="alt"
+                      ></img>
+                    </a>
+                      <div class="sushi-card_content">
+                        <h3 class="sushi-card_title">
+                          Васаби
+                        </h3>
+                        <div class="sushi-card_count">
+                          <span class="sushi-card_count-title"
+                            >Колличество</span
+                          >
+                          <div class="sushi-card_count-stepper">
+                            <input
+                              class="stepper"
+                              type="number"
+                              value="0"
+                              min="0"
+                              max="10000"
+                              step="1"
+                            />
+                          </div>
+                        </div>
+                        <button class="button button--cart">
+                          <svg width="15" height="15">
+                            <use
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xlink:href="img/sprite-svg.svg#shopping-bag"
+                            ></use>
+                          </svg>
+                          Закажу!
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xxl-3 col-xl-4">
+                  <div class="sushi-card sushi-card--small">
+                    <div class="sushi-card_wrapper">
+                      <a
+                        href="/product_page.html"
+                        class="sushi-card_preview"
+                      >
+                      <img
+                        src="./img/ginger.png"
+                        alt="alt"
+                      ></img>
+                    </a>
+                      <div class="sushi-card_content">
+                        <h3 class="sushi-card_title">
+                          Васаби
+                        </h3>
+                        <div class="sushi-card_count">
+                          <span class="sushi-card_count-title"
+                            >Колличество</span
+                          >
+                          <div class="sushi-card_count-stepper">
+                            <input
+                              class="stepper"
+                              type="number"
+                              value="0"
+                              min="0"
+                              max="10000"
+                              step="1"
+                            />
+                          </div>
+                        </div>
+                        <button class="button button--cart">
+                          <svg width="15" height="15">
+                            <use
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xlink:href="img/sprite-svg.svg#shopping-bag"
+                            ></use>
+                          </svg>
+                          Закажу!
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xxl-3 col-xl-4">
+                  <div class="sushi-card sushi-card--small">
+                    <div class="sushi-card_wrapper">
+                      <a
+                        href="/product_page.html"
+                        class="sushi-card_preview"
+                      >
+                      <img
+                        src="./img/ginger.png"
+                        alt="alt"
+                      ></img>
+                    </a>
+                      <div class="sushi-card_content">
+                        <h3 class="sushi-card_title">
+                          Васаби
+                        </h3>
+                        <div class="sushi-card_count">
+                          <span class="sushi-card_count-title"
+                            >Колличество</span
+                          >
+                          <div class="sushi-card_count-stepper">
+                            <input
+                              class="stepper"
+                              type="number"
+                              value="0"
+                              min="0"
+                              max="10000"
+                              step="1"
+                            />
+                          </div>
+                        </div>
+                        <button class="button button--cart">
+                          <svg width="15" height="15">
+                            <use
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xlink:href="img/sprite-svg.svg#shopping-bag"
+                            ></use>
+                          </svg>
+                          Закажу!
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xxl-3 col-xl-4">
+                  <div class="sushi-card sushi-card--small">
+                    <div class="sushi-card_wrapper">
+                      <a
+                        href="/product_page.html"
+                        class="sushi-card_preview"
+                      >
+                      <img
+                        src="./img/ginger.png"
+                        alt="alt"
+                      ></img>
+                    </a>
+                      <div class="sushi-card_content">
+                        <h3 class="sushi-card_title">
+                          Васаби
+                        </h3>
+                        <div class="sushi-card_count">
+                          <span class="sushi-card_count-title"
+                            >Колличество</span
+                          >
+                          <div class="sushi-card_count-stepper">
+                            <input
+                              class="stepper"
+                              type="number"
+                              value="0"
+                              min="0"
+                              max="10000"
+                              step="1"
+                            />
+                          </div>
+                        </div>
+                        <button class="button button--cart">
+                          <svg width="15" height="15">
+                            <use
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xlink:href="img/sprite-svg.svg#shopping-bag"
+                            ></use>
+                          </svg>
+                          Закажу!
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xxl-3 col-xl-4">
+                  <div class="sushi-card sushi-card--small">
+                    <div class="sushi-card_wrapper">
+                      <a
+                        href="/product_page.html"
+                        class="sushi-card_preview"
+                      >
+                      <img
+                        src="./img/ginger.png"
+                        alt="alt"
+                      ></img>
+                    </a>
+                      <div class="sushi-card_content">
+                        <h3 class="sushi-card_title">
+                          Васаби
+                        </h3>
+                        <div class="sushi-card_count">
+                          <span class="sushi-card_count-title"
+                            >Колличество</span
+                          >
+                          <div class="sushi-card_count-stepper">
+                            <input
+                              class="stepper"
+                              type="number"
+                              value="0"
+                              min="0"
+                              max="10000"
+                              step="1"
+                            />
+                          </div>
+                        </div>
+                        <button class="button button--cart">
+                          <svg width="15" height="15">
+                            <use
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              xlink:href="img/sprite-svg.svg#shopping-bag"
+                            ></use>
+                          </svg>
+                          Закажу!
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Content Inner Page end -->
+      </div>
+
+      <!-- Footer Start -->
+      @@include('blocks/footer/footer.html')
+      <!-- Footer End -->
+    </section>
+
+    <!-- Content End -->
+    <div class="nav-overlay"></div>
+    @@include('_include/page_bottom.html')
+  </body>
+</html>

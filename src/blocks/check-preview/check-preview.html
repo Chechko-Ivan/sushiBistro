@@ -1,0 +1,76 @@
+<!--DEV
+
+@ @include('blocks/check-preview/check-preview.html')
+
+-->
+
+<div class="check-preview">
+  <h3 class="check-preview_title">Ваш <b>Заказ</b></h3>
+  <div class="check-preview_block">
+    <h4 class="check-preview_subtitle">Наименование</h4>
+    <ul class="check-preview-list mt-4 mt-xl-3">
+      <li class="check-preview-list_item mb-2">
+        <span class="check-preview-list_item-name"
+          >Ролл Филадельфия&nbsp;<b>x1</b></span
+        >
+        <span class="check-preview-list_item-coast">13,90 руб.</span>
+      </li>
+      <li class="check-preview-list_item mb-2">
+        <span class="check-preview-list_item-name"
+          >Палочки для суши&nbsp;<b>х3</b></span
+        >
+        <span class="check-preview-list_item-coast">13,90 руб.</span>
+      </li>
+      <li class="check-preview-list_item mb-2">
+        <span class="check-preview-list_item-name"
+          >Соевый соус&nbsp;<b>x2</b></span
+        >
+        <b class="check-preview-list_item-coast">13,90 руб.</b>
+      </li>
+    </ul>
+  </div>
+
+  <div class="check-preview_block">
+    <h4 class="check-preview_subtitle d-flex justify-content-between">
+      Сумма заказа
+      <span class="check-preview_subtitle-coast">15.60 руб.</span>
+    </h4>
+  </div>
+
+  <div class="check-preview_block">
+    <h4 class="check-preview_subtitle d-flex justify-content-between">
+      Как будет производиться оплата?
+    </h4>
+    <div class="mt-4">
+      <div class="custom-control custom-radio">
+        <input
+          type="radio"
+          id="cashPayment"
+          name="paymentMethod"
+          class="custom-control-input"
+        />
+        <label class="custom-control-label" for="cashPayment"
+          >Оплата наличными</label
+        >
+      </div>
+      <div class="custom-control custom-radio">
+        <input
+          type="radio"
+          id="cardPayment"
+          name="paymentMethod"
+          class="custom-control-input"
+        />
+        <label class="custom-control-label" for="cardPayment"
+          >Оплата картой</label
+        >
+      </div>
+    </div>
+  </div>
+
+  <a
+    href="./confirm_order.html"
+    class="button button-dark-orange px-0 d-block mt-5 mx-auto"
+  >
+    Оформить заказ
+  </a>
+</div>

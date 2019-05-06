@@ -1,8 +1,52 @@
 $(document).ready(function() {
-  $(".top-slider_list").slick({
-    prevArrow: $(".top-slider .slider_arrow--prev"),
-    nextArrow: $(".top-slider .slider_arrow--next")
+  AOS.init({
+    duration: 1200
+    // once: true
   });
+
+  if ($(".top-slider_list").length) {
+    $(".top-slider_list").slick({
+      prevArrow: $(".top-slider .slider_arrow--prev"),
+      nextArrow: $(".top-slider .slider_arrow--next")
+    });
+  }
+
+  if ($(".addition_slider-wrapper").length) {
+    $(".addition_slider-wrapper").slick({
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 2500,
+      responsive: [
+        {
+          breakpoint: 1440,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  }
 
   $(".stepper").inputSpinner();
   $("#burger").click(toggleMenu);

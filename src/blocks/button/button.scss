@@ -24,6 +24,8 @@
   &:hover,
   &:focus {
     outline: none;
+    text-decoration: none;
+    color: #ffffff;
   }
 
   &--cart {
@@ -81,6 +83,75 @@
 
     &:active {
       background-color: $color-main--active;
+    }
+  }
+
+  &-middle {
+    background-color: #7dbc00;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 13px 0px;
+    width: 100%;
+    max-width: 170px;
+    transition: all 0.3s ease-in-out;
+
+    @media (max-width: 575px) {
+      max-width: 250px;
+      margin-right: auto !important;
+      margin-left: auto;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: lighten(#7dbc00, 3%);
+    }
+
+    &:active {
+      background-color: darken(#7dbc00, 2%);
+    }
+  }
+
+  &-light-orange {
+    background-color: #f2cc56;
+
+    &:hover,
+    &:focus {
+      background-color: lighten(#f2cc56, 4%);
+    }
+
+    &:active {
+      background-color: darken(#f2cc56, 5%);
+    }
+  }
+
+  &-dark-orange {
+    background-color: $orange;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+
+    max-width: 270px;
+    width: 100%;
+    @media (max-width: 575px) {
+      max-width: 250px;
+      padding: 13px 0px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: lighten($orange, 4%);
+    }
+
+    &:active {
+      background-color: darken($orange, 5%);
     }
   }
 }
