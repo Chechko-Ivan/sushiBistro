@@ -338,31 +338,29 @@ gulp.task("js", function(callback) {
   const concat = require("gulp-concat");
   if (lists.js.length > 0) {
     console.log("---------- Обработка JS");
-    return (
-      gulp
-        .src(lists.js)
-        .pipe(
-          plumber({
-            errorHandler: function(err) {
-              notify.onError({
-                title: "Javascript concat/uglify error",
-                message: err.message
-              })(err);
-              this.emit("end");
-            }
-          })
-        )
-        .pipe(concat("script.min.js"))
-        // .pipe(gulpIf(!isDev, uglify()))
-        .pipe(
-          size({
-            title: "Размер",
-            showFiles: true,
-            showTotal: false
-          })
-        )
-        .pipe(gulp.dest(dirs.buildPath + "/js"))
-    );
+    return gulp
+      .src(lists.js)
+      .pipe(
+        plumber({
+          errorHandler: function(err) {
+            notify.onError({
+              title: "Javascript concat/uglify error",
+              message: err.message
+            })(err);
+            this.emit("end");
+          }
+        })
+      )
+      .pipe(concat("script.min.js"))
+      .pipe(gulpIf(!isDev, uglify()))
+      .pipe(
+        size({
+          title: "Размер",
+          showFiles: true,
+          showTotal: false
+        })
+      )
+      .pipe(gulp.dest(dirs.buildPath + "/js"));
   } else {
     console.log("---------- Обработка JS: в сборке нет JS-файлов");
     callback();
