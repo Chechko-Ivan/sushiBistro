@@ -7,11 +7,15 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 40px;
-  padding: 11px 24px;
+  margin-top: vh(40px);
+  padding: vh(11px) vh(24px);
   border: 1px solid $border-color;
   outline: none;
   transition: border-color 0.3s ease-in-out;
+
+  @media (max-height: 768px) {
+    padding: vh(13px) vh(24px);
+  }
 
   $block-name: &;
 

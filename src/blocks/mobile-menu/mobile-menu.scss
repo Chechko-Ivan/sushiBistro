@@ -3,6 +3,14 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(#ffffff, 0.99);
+  min-height: 56px;
+
   .phone_wrapper {
     flex-direction: row;
     align-items: center;

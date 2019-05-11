@@ -4,7 +4,8 @@
 
 .logo {
   display: inline-block;
-  width: 130px;
+  width: vh(130px);
+  min-width: 100px;
 
   &_image {
     width: 100%;

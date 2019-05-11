@@ -12,10 +12,14 @@
 
   &_number {
     font-weight: 900;
-    font-size: 64px;
+    font-size: vh(64px);
     line-height: 0.6;
     color: #e42021;
     transition: color 0.3s ease-in-out;
+
+    @media (max-height: 768px) {
+      font-size: vh(80px);
+    }
 
     &:hover,
     &:focus {

@@ -4,13 +4,15 @@
 
 .social-link {
   $block-name: &; // #{$block-name}__element {}
+  width: 100%;
 
   @include list-reset();
   display: flex;
+  justify-content: space-around;
 
   &_item {
     &:not(:last-of-type) {
-      margin-right: 20px;
+      // margin-right: 20px;
     }
   }
 
@@ -24,6 +26,11 @@
     border-radius: 50%;
     outline: none;
     transition: background-color 0.3s ease-in-out;
+
+    @media (max-height: 768px) {
+      width: 35px;
+      height: 35px;
+    }
 
     &:hover,
     &:focus {

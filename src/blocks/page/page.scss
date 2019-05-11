@@ -29,6 +29,12 @@ body {
   position: relative;
   height: 100%;
   overflow: hidden !important;
+
+  @media (max-width: 480px) {
+    .mobile-menu_phone {
+      opacity: 0;
+    }
+  }
 }
 
 [tabindex="-1"]:focus {

@@ -116,15 +116,15 @@
   }
 
   &-light-orange {
-    background-color: #f2cc56;
+    background-color: $gray;
 
     &:hover,
     &:focus {
-      background-color: lighten(#f2cc56, 4%);
+      background-color: lighten($gray, 4%);
     }
 
     &:active {
-      background-color: darken(#f2cc56, 5%);
+      background-color: darken($gray, 5%);
     }
   }
 

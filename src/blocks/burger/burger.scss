@@ -4,7 +4,7 @@
 
 .burger {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   width: 30px;
   height: 21px;
   background-color: transparent;
@@ -21,7 +21,7 @@
       transform: translateX(275px);
     }
     #{$block-name}_line {
-      background-color: $white;
+      background-color: $black;
 
       &--top {
         top: 9px;

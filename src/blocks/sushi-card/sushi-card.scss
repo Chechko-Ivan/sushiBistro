@@ -65,13 +65,29 @@
   &_title {
     margin-top: 0;
     margin-bottom: 20px;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 1.6;
     text-align: center;
+    color: #000000;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: inherit;
+
+      h3 {
+        color: rgba(#000000, 0.6);
+      }
+    }
 
     @media (max-width: 1919px) {
       margin-bottom: 15px;
+    }
+
+    h3 {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 1.6;
+      line-height: 1.6;
+      text-align: center;
     }
   }
 

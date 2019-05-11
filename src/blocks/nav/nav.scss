@@ -39,8 +39,8 @@
     // height: 100%;
     height: auto;
     margin: 0 auto;
-    padding-bottom: 40px;
-    padding-top: 40px;
+    padding-bottom: vh(40px);
+    padding-top: vh(40px);
     backface-visibility: hidden;
 
     @media (max-width: 576px) {
@@ -53,23 +53,23 @@
   }
 
   &_menu {
-    margin-top: 35px;
+    margin-top: vh(35px);
   }
 
   &_sicial-link {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: vh(15px);
   }
 
   &_phone {
-    margin-top: 40px;
+    margin-top: vh(40px);
     transition: color 0.3s ease-in-out;
   }
 
   &_link-about {
     display: inline-block;
-    margin-top: 25px;
+    margin-top: vh(25px);
     margin-left: 12px;
     font-weight: 700;
     color: rgba($text-color, 0.7);
@@ -87,8 +87,8 @@
   }
 
   &_copyright {
-    margin-top: 25px;
-    margin-bottom: 40px;
+    margin-top: vh(25px);
+    margin-bottom: vh(30px);
   }
 }
 
@@ -101,7 +101,7 @@
   transition: background-color 0.4s ease-out;
 
   &--active {
-    z-index: 1;
+    z-index: 0;
     display: block;
     background-color: rgba($black, 0.5);
   }
