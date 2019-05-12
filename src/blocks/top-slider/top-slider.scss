@@ -15,6 +15,10 @@
     height: 450px;
     background-repeat: no-repeat;
 
+    &:focus {
+      outline: none;
+    }
+
     @media (max-width: 1919px) {
       height: 430px;
     }
@@ -66,6 +70,12 @@
   background-color: rgba(#ffffff, 0.3);
   border-radius: 50%;
   transition: background-color 0.3s ease-in-out;
+  backface-visibility: hidden;
+
+  @media (max-width: 575px) {
+    width: 35px;
+    height: 35px;
+  }
 
   &:hover,
   &:focus {
