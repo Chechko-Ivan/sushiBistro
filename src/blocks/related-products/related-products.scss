@@ -6,6 +6,7 @@
   $block-name: &; // #{$block-name}__element {}
 
   &_item {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -25,6 +26,27 @@
     &:focus {
       text-decoration: none;
       box-shadow: 0 0 15px rgba(81, 92, 98, 0.3);
+
+      .related-products_item-button {
+        top: 50%;
+        left: 50%;
+        max-width: 60%;
+        transform: translate(-50%, -100%);
+        position: absolute;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &-button {
+      top: 50%;
+      left: 50%;
+      max-width: 60%;
+      transform: translate(-50%, -100%);
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s ease;
     }
   }
 
