@@ -4,6 +4,7 @@
 
 .top-slider {
   position: relative;
+  max-height: 450px;
 
   &_list {
     @include list-reset();

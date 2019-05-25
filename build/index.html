@@ -9,6 +9,14 @@
 
     <link href="css/style.min.css?1" rel="stylesheet" media="screen" />
 
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" /> -->
+
 
     <link
       rel="preload"
@@ -295,6 +303,12 @@
                 <img src="./img//slide.png" alt="Sushi bistro Slider Image" />
               </a>
             </li>
+
+            <li class="top-slider_item">
+              <a href="/" class="top-slider_link">
+                <img src="./img//slide.png" alt="Sushi bistro Slider Image" />
+              </a>
+            </li>
           </ul>
 
           <div class="slider_arrow-wrapper">
@@ -391,6 +405,8 @@
                   <a class="sushi-card_title" href="./product_page.html">
                     <h3>
                       Lorem, ipsum dolor sit
+                      <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#burn"></use></svg>
+                      <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#vegan"></use></svg>
                     </h3>
                   </a>
                   <span class="sushi-card_coast">
@@ -449,6 +465,8 @@
                   <a class="sushi-card_title" href="./product_page.html">
                     <h3>
                       Lorem, ipsum dolor sit
+                      <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#burn"></use></svg>
+                      <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#vegan"></use></svg>
                     </h3>
                   </a>
                   <span class="sushi-card_coast">
@@ -507,6 +525,8 @@
                   <a class="sushi-card_title" href="./product_page.html">
                     <h3>
                       Lorem, ipsum dolor sit
+                      <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#burn"></use></svg>
+                      <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#vegan"></use></svg>
                     </h3>
                   </a>
                   <span class="sushi-card_coast">
@@ -565,6 +585,8 @@
                   <a class="sushi-card_title" href="./product_page.html">
                     <h3>
                       Lorem, ipsum dolor sit
+                      <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#burn"></use></svg>
+                      <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#vegan"></use></svg>
                     </h3>
                   </a>
                   <span class="sushi-card_coast">
@@ -623,6 +645,8 @@
                   <a class="sushi-card_title" href="./product_page.html">
                     <h3>
                       Lorem, ipsum dolor sit
+                      <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#burn"></use></svg>
+                      <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#vegan"></use></svg>
                     </h3>
                   </a>
                   <span class="sushi-card_coast">
@@ -681,6 +705,8 @@
                   <a class="sushi-card_title" href="./product_page.html">
                     <h3>
                       Lorem, ipsum dolor sit
+                      <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#burn"></use></svg>
+                      <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#vegan"></use></svg>
                     </h3>
                   </a>
                   <span class="sushi-card_coast">
@@ -739,6 +765,8 @@
                   <a class="sushi-card_title" href="./product_page.html">
                     <h3>
                       Lorem, ipsum dolor sit
+                      <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#burn"></use></svg>
+                      <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#vegan"></use></svg>
                     </h3>
                   </a>
                   <span class="sushi-card_coast">
@@ -797,6 +825,8 @@
                   <a class="sushi-card_title" href="./product_page.html">
                     <h3>
                       Lorem, ipsum dolor sit
+                      <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#burn"></use></svg>
+                      <svg width="15" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#vegan"></use></svg>
                     </h3>
                   </a>
                   <span class="sushi-card_coast">
@@ -1105,14 +1135,16 @@
 
     <script>
       // Script for sort sushi card
-      var mixer = mixitup(".main_sushi-card", {
-        animation: {
-          duration: 500,
-          nudge: true,
-          reverseOut: false,
-          effects: "scale(0.01) translateZ(100px)"
-        }
-      });
+      if ($(".main_sushi-card")) {
+        var mixer = mixitup(".main_sushi-card", {
+          animation: {
+            duration: 500,
+            nudge: true,
+            reverseOut: false,
+            effects: "scale(0.01) translateZ(100px)"
+          }
+        });
+      }
     </script>
   </body>
 </html>

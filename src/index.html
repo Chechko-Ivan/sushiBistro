@@ -161,14 +161,16 @@
     @@include('_include/page_bottom.html')
     <script>
       // Script for sort sushi card
-      var mixer = mixitup(".main_sushi-card", {
-        animation: {
-          duration: 500,
-          nudge: true,
-          reverseOut: false,
-          effects: "scale(0.01) translateZ(100px)"
-        }
-      });
+      if ($(".main_sushi-card")) {
+        var mixer = mixitup(".main_sushi-card", {
+          animation: {
+            duration: 500,
+            nudge: true,
+            reverseOut: false,
+            effects: "scale(0.01) translateZ(100px)"
+          }
+        });
+      }
     </script>
   </body>
 </html>
