@@ -10,17 +10,19 @@
   z-index: 1;
   background-color: rgba(#ffffff, 0.99);
   min-height: 56px;
+  display: flex;
+  align-items: center;
 
   .phone_wrapper {
     flex-direction: row;
     align-items: center;
   }
   .phone_number {
-    font-size: 40px;
+    font-size: 20px;
     line-height: 1;
 
     @media (max-width: 575px) {
-      font-size: 27px;
+      font-size: 20px;
     }
   }
 

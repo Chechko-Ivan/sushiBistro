@@ -1,13 +1,13 @@
-$(document).ready(function() {
+$(document).ready(function () {
   AOS.init({
     duration: 1200,
-    once: true
+    once: true,
   });
 
   if ($(".top-slider_list").length) {
     $(".top-slider_list").slick({
       prevArrow: $(".top-slider .slider_arrow--prev"),
-      nextArrow: $(".top-slider .slider_arrow--next")
+      nextArrow: $(".top-slider .slider_arrow--next"),
     });
   }
 
@@ -23,28 +23,28 @@ $(document).ready(function() {
         {
           breakpoint: 1440,
           settings: {
-            slidesToShow: 3
-          }
+            slidesToShow: 3,
+          },
         },
         {
           breakpoint: 1200,
           settings: {
-            slidesToShow: 3
-          }
+            slidesToShow: 3,
+          },
         },
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 2
-          }
+            slidesToShow: 2,
+          },
         },
         {
           breakpoint: 576,
           settings: {
-            slidesToShow: 1
-          }
-        }
-      ]
+            slidesToShow: 1,
+          },
+        },
+      ],
     });
   }
 
@@ -60,16 +60,16 @@ $(document).ready(function() {
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 2
-          }
+            slidesToShow: 2,
+          },
         },
         {
           breakpoint: 576,
           settings: {
-            slidesToShow: 1
-          }
-        }
-      ]
+            slidesToShow: 1,
+          },
+        },
+      ],
     });
   }
 
@@ -89,16 +89,16 @@ $(document).ready(function() {
     overlay.toggleClass("nav-overlay--active");
   }
 
-  $(".top-slider_link img").each(function() {
-    var path = $(this).attr("src");
-    var d = $(this).closest("a");
+  // $(".top-slider_link img").each(function() {
+  //   var path = $(this).attr("src");
+  //   var d = $(this).closest("a");
 
-    d.css({
-      background: "url(" + path + ") center no-repeat",
-      "-webkit-background-size": "cover",
-      "background-size": "cover"
-    });
-  });
+  //   d.css({
+  //     background: "url(" + path + ") center no-repeat",
+  //     "-webkit-background-size": "cover",
+  //     "background-size": "cover"
+  //   });
+  // });
 
   $("#callToAction").inputmask({ mask: "+375 (99) 999 99 99" });
 });

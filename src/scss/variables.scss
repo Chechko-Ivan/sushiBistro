@@ -6,11 +6,13 @@ $white: #ffffff;
 
 $green: #4caf50;
 $orange: #e07b10;
+$orange1: #ff7a14;
+$orange2: #ca5b07;
 $red: #c00a27;
 
-$color-main: $red;
-$color-main--hover: lighten($red, 7%);
-$color-main--active: darken($red, 2%);
+$color-main: $orange1;
+$color-main--hover: darken($orange1, 7%);
+$color-main--active: darken($orange1, 10%);
 
 $color-success: $green;
 $color-danger: $red;
@@ -38,7 +40,7 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1440px,
-  xxxl: 1600px
+  xxxl: 1600px,
 );
 $container-max-widths: (
   sm: 576px,
@@ -46,7 +48,7 @@ $container-max-widths: (
   lg: 992px,
   xl: 1200px,
   xxl: 1440px,
-  xxxl: 1600px
+  xxxl: 1600px,
 );
 
 $gutter: $grid-gutter-width;

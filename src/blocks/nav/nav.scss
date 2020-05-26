@@ -66,6 +66,11 @@
   &_phone {
     margin-top: vh(40px);
     transition: color 0.3s ease-in-out;
+
+    .phone_number {
+      font-size: 20px !important;
+      color: $color-main;
+    }
   }
 
   &_link-about {
@@ -90,6 +95,10 @@
   &_copyright {
     margin-top: vh(25px);
     margin-bottom: vh(30px);
+  }
+
+  a {
+    color: #000000;
   }
 }
 
